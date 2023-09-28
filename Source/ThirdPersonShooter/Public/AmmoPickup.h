@@ -22,8 +22,8 @@ protected:
 	UFUNCTION(BlueprintCallable)
 		int32 GetAmmoAmount();
 
-private:
-	UPROPERTY(EditAnywhere)
+protected:
+	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		int32 AmmoAmount = 30;
 
 

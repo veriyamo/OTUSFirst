@@ -18,6 +18,9 @@ public:
 	virtual void Tick(float DeltaTime) override;
 	virtual void Destroyed() override;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		UStaticMeshComponent* PickupMesh;
+
 protected:
 	// Вызывается при запуске игры или при возрождении
 	virtual void BeginPlay() override;
@@ -31,9 +34,6 @@ protected:
 private:
 	UPROPERTY(EditAnywhere)
 	class USphereComponent* OverlapSphere;
-
-	UPROPERTY(EditAnywhere)
-		UStaticMeshComponent* PickupMesh;
 
 	UPROPERTY(EditAnywhere)
 		class USoundCue* PickupSound;
